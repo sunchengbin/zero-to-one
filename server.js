@@ -2,6 +2,7 @@ import Koa from 'koa'
 import { KoaRouterApp } from './router/index'
 const Cors = require('koa2-cors')
 const App = new Koa()
+// process.env = 'preview'
 App.use(async (ctx, next) => {
   console.log(`Process ${ctx.request.method} ${ctx.request.url}...`)
   await next()

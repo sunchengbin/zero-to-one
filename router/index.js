@@ -3,10 +3,10 @@ import Fs from 'fs'
 import KoaRouter from 'koa-router'
 const KoaRouterApp = KoaRouter()
 const routerFiles = Fs.readdirSync(__dirname + '/api')
-var jsRouterFiles = routerFiles.filter((f) => {
+var outerFilesArr = routerFiles.filter((f) => {
     return f.endsWith('.js')
 })
-jsRouterFiles.forEach((f) => {
+outerFilesArr.forEach((f) => {
   console.log(`process controller: ${f}...`)
   // 导入js文件:
   let file = require(__dirname + '/api/' + f)
