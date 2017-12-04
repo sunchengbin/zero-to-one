@@ -57,5 +57,5 @@ $ npm run start
 
 ### 测试
 
-访问 http://www.zerotoone.com 页面
-查看 network 中接口请求
+- 访问 http://www.zerotoone.com 页面
+- 查看 network 中接口请求
