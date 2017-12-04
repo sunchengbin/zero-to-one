@@ -9,12 +9,22 @@
   -->
   <base target="_blank">
   <title>index</title>
-  <link href="./css/app/index.css" rel="stylesheet">
+  <!-- <link href="./css/app/index.css" rel="stylesheet"> -->
 </head>
 <body>
   <div class="header">Header</div>
   <div class="content">Hello World</div>
   <div class="footer">Footer</div>
-  <!-- <script src="./js/index.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+  <script>
+    $.ajax({
+      url: 'http://api.zerotoone.com/v1/hello/sun',
+      dataType: 'json',
+      type: 'get',
+      success: function(res){
+        console.log(res)
+      }
+    })
+  </script>
 </body>
 </html>
