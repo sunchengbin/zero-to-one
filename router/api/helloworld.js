@@ -8,7 +8,7 @@ let Hello = {
     let res = await SeqExample.query('select * from zhenduan_oral where id = 2', { type: Sequelize.QueryTypes.SELECT }).spread((results) => {
       return results
     })
-    ctx.response.body = `<h1>Hello, ${name},获取到数据如下: ${JSON.stringify(res)}!</h1>`
+    ctx.response.body = res
   }
 }
 export {
