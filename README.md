@@ -6,6 +6,8 @@
 - koa2 [http://www.ruanyifeng.com/blog/2017/08/koa.html] [https://koa.bootcss.com/]
 - koa-router [https://github.com/alexmingoia/koa-router]
 - koa2-cors（解决跨域） [https://github.com/zadzbw/koa2-cors]
+- log4js (日志中间件) [https://github.com/log4js-node/log4js-node] [https://log4js-node.github.io/log4js-node/index.html]
+- koa-compose (合并中间件) [https://github.com/koajs/compose]
 - sequelize（数据库操作） [http://docs.sequelizejs.com/]
 - mysql
 - REST API （接口规范）[http://www.ruanyifeng.com/blog/2014/05/restful_api.html] [http://www.restapitutorial.com/]
@@ -20,12 +22,12 @@
 $ npm install
 ```
 ===========================================================================
-### 本地测试域名配置（可选）
-- 后端服务访问地址: localhost:2000
+## 跨域测试（可以选择自己喜欢的方式去实现跨域测试，以下仅供参考）
+### 域名配置（本地模拟跨域，并在index.html中测试接口正确性）
 - 本地安装nginx
 - 设置测试页面访问域名 http://www.zerotoone.com （hosts绑定 127.0.0.1  www.zerotoone.com）
 ```
-### nginx.config 添加server
+### nginx.config 添加项目index.html的server
 server{
   listen 80;
   server_name www.zerotoone.com;
@@ -38,14 +40,10 @@ server{
 ```
 - 设置后端服务访问域名 http://api.zerotoone.com (hosts绑定 127.0.0.1  api.zerotoone.com)
 ```
-### nginx.config 添加server
+### nginx.config 后端server为2000端口 -- 为端口绑定域名
 server {
-  listen 80;
+  listen 2000;
   server_name   api.zerotoone.com;
-  location / {
-    proxy_pass    http://127.0.0.1:2000;
-    proxy_redirect default;
-  }
 }
 ```
 ===========================================================================

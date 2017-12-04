@@ -13,5 +13,6 @@ let SeqExample = new Sequelize(MysqlConfig.database, MysqlConfig.username, Mysql
     }
 })
 export {
-  SeqExample
+  SeqExample,
+  Sequelize
 }
