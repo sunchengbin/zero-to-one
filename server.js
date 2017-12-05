@@ -3,8 +3,7 @@ import {
   KoaRouterApp
 } from './router/index'
 import {
-  SeqExample,
-  Sequelize
+  DbPool
 } from './dbpool/connect'
 import {
   BaseMiddleware
@@ -13,9 +12,12 @@ const Log4js = require('log4js')
 import Cors from 'koa2-cors'
 const App = new Koa()
 
+// 设置环境变量，用于数据库连接
+App.env = process.argv.splice(2,1)[0] || 'development'
 // 在ctx上添加数据库的引用
-App.context.db = SeqExample
-App.context.sequelize = Sequelize
+const envDb = DbPool(App)
+App.context.db = envDb.SeqExample
+App.context.sequelize = envDb.Sequelize
 
 // 添加打印日志
 Log4js.configure({
@@ -28,7 +30,7 @@ Log4js.configure({
     }
   }
 });
-var Logger = Log4js.getLogger('app')
+let Logger = Log4js.getLogger('app')
 // 添加logger到context,如果有需要方便路由层中使用
 App.context.logger = Logger
 
@@ -43,11 +45,10 @@ App.use(Cors({
 // 处理错误中间件
 App.use(BaseMiddleware)
 
-// 请求设置
+// 请求设置 这里可以优先过滤
 App.use(async (ctx, next) => {
-  // ctx.throw(500)
-  console.log(`Process ${ctx.request.method} ${ctx.request.url}...`)
-  Logger.info(`Process ${ctx.request.method} ${ctx.request.url}...`)
+  // ctx.throw(404)
+  Logger.info(`Process ${JSON.stringify(ctx)}`)
   await next()
 })
 

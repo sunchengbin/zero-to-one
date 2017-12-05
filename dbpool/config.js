@@ -19,17 +19,22 @@ const onlineConfig = {
   host: '10.1.101.218', //主机名
   port: 3308 //端口号
 }
-let MysqlConfig = preConfig
-switch (process.env) {
-  case 'preview':
-    MysqlConfig = preConfig
-    break
-  case 'online':
-    MysqlConfig = onlineConfig
-    break
-  default:
-    break
+let MysqlConfig = (app) => {
+  let config = devConfig
+  console.log(app.env)
+  switch (app.env) {
+    case 'preview':
+      config = preConfig
+      break
+    case 'online':
+      config = onlineConfig
+      break
+    default:
+      break
+  }
+  return config
 }
+
 export {
   MysqlConfig
 }
