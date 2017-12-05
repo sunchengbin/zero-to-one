@@ -25,6 +25,9 @@ $ npm install
 ## 跨域测试（可以选择自己喜欢的方式去实现跨域测试，以下仅供参考）
 ### 域名配置（本地模拟跨域，并在index.html中测试接口正确性）
 - 本地安装nginx
+```
+$ brew install nginx
+```
 - 设置测试页面访问域名 http://www.zerotoone.com （hosts绑定 127.0.0.1  www.zerotoone.com）
 ```
 ### nginx.config 添加项目index.html的server
