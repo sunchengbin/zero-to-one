@@ -77,5 +77,6 @@ $ npm run start online （线上环境）
 │   └── connect.js  数据库连接池
 └── controller      项目应用层控制目录
     ├── libs        工具库
+    ├── app         接口数据控制
     └── middleware  中间件(存放app使用的中间件)
 ```
