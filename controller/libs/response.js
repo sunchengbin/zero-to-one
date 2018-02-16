@@ -1,7 +1,11 @@
-const ParseBody = (ctx, res, code) => {
+const ParseBody = (ctx, res, code, msg) => {
+  // ctx.logger.info(`${ctx.request.url} End Time ${Date.now()}`)
   return {
-    code: code || 200,
-    data: res
+    status: {
+      status_code: code || 0,
+      status_reason : msg || ''
+    },
+    result: res
   }
 }
 export {

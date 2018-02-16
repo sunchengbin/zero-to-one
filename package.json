@@ -1,18 +1,27 @@
 {
-  "name": "zero-to-one",
+  "name": "Australia-Koa",
   "version": "1.0.0",
   "description": "web-server-frame",
   "scripts": {
-    "start": "babel-node ./server.js"
+    "start": "babel-node ./server.js",
+    "dev": "babel-node ./server.js",
+    "pre": "babel-node ./server.js preview",
+    "prod": "babel-node ./server.js online"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1"
+    "babel-preset-env": "^1.6.1",
+    "md5": "^2.2.1",
+    "request": "^2.83.0"
   },
   "devDependencies": {
+    "axios": "^0.17.1",
     "koa": "^2.4.1",
+    "koa-bodyparser": "^2.5.0",
     "koa-compose": "^4.0.0",
+    "koa-helmet": "^3.3.0",
     "koa-router": "^7.3.0",
+    "koa-static": "^4.0.2",
     "koa2-cors": "^2.0.5",
     "log4js": "^2.3.12",
     "mysql2": "^1.5.1",
@@ -22,10 +31,10 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sunchengbin/zero-to-one.git"
+    "url": "git+https://gitlab.vdian.net/InnovationSeals/Australia-Koa"
   },
   "bugs": {
-    "url": "https://github.com/sunchengbin/zero-to-one/issues"
+    "url": "https://gitlab.vdian.net/InnovationSeals/Australia-Koa/issues"
   },
-  "homepage": "https://github.com/sunchengbin/zero-to-one#readme"
+  "homepage": "https://gitlab.vdian.net/InnovationSeals/Australia-Koa"
 }

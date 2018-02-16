@@ -1,6 +1,6 @@
 import {
   HelloWorld
-} from '../../controller/app/hello-world'
+} from '../../../controller/app/demo/hello-world'
 let Hello = {
   type: 'GET',
   url: '/v1/hello/:name',
