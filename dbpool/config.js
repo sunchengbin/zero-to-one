@@ -19,22 +19,6 @@ const devConfig = {
     password: 'fangxinxuan', //口令
     host: 'localhost', //主机名
     port: 3306 //端口号
-  },
-  // 推广大使
-  ambassador: {
-    database: 'test', //数据库
-    username: 'root', //用户名
-    password: 'fangxinxuan', //口令
-    host: 'localhost', //主机名
-    port: 3306 //端口号
-  },
-  // 答题活动
-  quiz: {
-    database: 'quiz', //数据库
-    username: 'root', //用户名
-    password: 'fangxinxuan', //口令
-    host: 'localhost', //主机名
-    port: 3306 //端口号
   }
 }
 const preConfig = {
@@ -58,22 +42,6 @@ const preConfig = {
     password: 'fangxinxuan', //口令
     host: 'localhost', //主机名
     port: 3306 //端口号
-  },
-  // 推广大使
-  ambassador: {
-    database: 'test', //数据库
-    username: 'root', //用户名
-    password: 'fangxinxuan', //口令
-    host: 'localhost', //主机名
-    port: 3306 //端口号
-  },
-  // 答题活动
-  quiz: {
-    database: 'quiz', //数据库
-    username: 'root', //用户名
-    password: 'fangxinxuan', //口令
-    host: 'localhost', //主机名
-    port: 3306 //端口号
   }
 }
 const onlineConfig = {
@@ -93,22 +61,6 @@ const onlineConfig = {
   },
   evaluation: {
     database: 'evaluation_pro', //数据库
-    username: 'root', //用户名
-    password: 'fangxinxuan', //口令
-    host: 'localhost', //主机名
-    port: 3306 //端口号
-  },
-  // 推广大使
-  ambassador: {
-    database: 'test', //数据库
-    username: 'root', //用户名
-    password: 'fangxinxuan', //口令
-    host: 'localhost', //主机名
-    port: 3306 //端口号
-  },
-  // 答题活动
-  quiz: {
-    database: 'quiz', //数据库
     username: 'root', //用户名
     password: 'fangxinxuan', //口令
     host: 'localhost', //主机名

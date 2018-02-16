@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <!-- 国内双核浏览器模式切换 -->
+  <!--
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+  -->
+  <base target="_blank">
+  <title>index</title>
+  <!-- <link href="./css/app/index.css" rel="stylesheet"> -->
+  <style>
+  html{
+    font-size: 18px;
+  }
+  </style>
+</head>
+<body>
+  <div class="header">Header</div>
+  <div class="content">Hello World</div>
+  <div class="footer">Footer</div>
+  <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+  <script>
+    $.ajax({
+      url: 'http://127.0.0.1:8088/v1/hello/sun',
+      dataType: 'json',
+      type: 'get',
+      success: function(res){
+        console.log(res)
+      }
+    })
+  </script>
+</body>
+</html>

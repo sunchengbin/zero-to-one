@@ -19,23 +19,10 @@ let CreateSeqExample = (config) => {
 let DbPool = (app) => {
   let config = MysqlConfig(app)
   let defaultConfig = config.default
-  let sizerConfig = config.sizer
-  let evaluationConfig = config.evaluation
-  let ambassadorConfig = config.ambassador
   let SeqExample = CreateSeqExample(defaultConfig)
-  let SeqSizerExample = CreateSeqExample(sizerConfig)
-  let SeqEvaluationExample = CreateSeqExample(evaluationConfig)
-  let SeqAmbassadorExample = CreateSeqExample(ambassadorConfig)
-  console.log(`ambassadorConfig is ${JSON.stringify(ambassadorConfig)}`)
-  let SeqQuizExample = CreateSeqExample(config.quiz)
-
   return {
-    SeqEvaluationExample,
-    SeqSizerExample,
     SeqExample,
-    Sequelize,
-    SeqAmbassadorExample,
-    SeqQuizExample
+    Sequelize
   }
 }
 

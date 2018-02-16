@@ -206,7 +206,7 @@ App.on('error', (err, ctx) => {
 // 其他
 switch (ENV) {
   case 'online':
-    App.listen(8080)
+    App.listen(8088)
     Logger.info('koa server is starting, the link is http://api.zerotoone.com')
     break
   case 'preview':
@@ -214,7 +214,7 @@ switch (ENV) {
     Logger.info('koa server is starting, the link is http://api.zerotoone.com')
     break
   default:
-    App.listen(8080)
+    App.listen(8088)
     Logger.info('koa server is starting, the link is http://api.zerotoone.com')
     break
 }
