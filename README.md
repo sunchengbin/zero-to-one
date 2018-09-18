@@ -82,9 +82,9 @@ server {
 ### 启动服务
 
 ```
-$ npm run start (本地测试环境)
-$ npm run start preview (预上线环境)
-$ npm run start online （线上环境）
+$ npm run dev (本地测试环境)
+$ npm run prew (预上线环境)
+$ npm run prod （线上环境）
 ```
 ===========================================================================
 
